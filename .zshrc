@@ -107,4 +107,6 @@ alias chargeoff="sudo modprobe acpi_call && echo '\_SB.PCI0.LPCB.EC0.VPC0.SBMC 3
 alias gpuoff="sudo sh -c 'echo "\_SB.PCI0.PEG0.PEGP._OFF" > /proc/acpi/call'"
 alias gpuon="sudo sh -c 'echo "\_SB.PCI0.PEG0.PEGP._ON" > /proc/acpi/call'"
 alias runvm="virsh destroy aa ;  virsh undefine aa ; virt-install --import --memory 4096  --vcpus 2 --name aa --disk ./aa.qcow2 --os-variant rhel7"
-alias j="./jp"
+alias vi="vim"
+alias turbooff="echo "1" | sudo tee /sys/devices/system/cpu/intel_pstate/no_turbo"
+alias turboon="echo "0" | sudo tee /sys/devices/system/cpu/intel_pstate/no_turbo"
